@@ -63,11 +63,52 @@
         .image-pair {
             display: flex;
             justify-content: center;
+            flex-direction: row;
         }
 
         .image-pair img {
             margin: 0 10px;
             /* Adds space between the two images */
+        }
+
+        th {
+            object-fit: cover;
+            width: 25%;
+            height: 2px;
+            font-size: 18px;
+        }
+        
+        .cls{
+            width: 250px;
+        }
+
+        @media (max-width:1072px) {
+
+            .cls{
+                width: 150px;
+            }
+            th {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width:845px) {
+
+            .cls{
+                width: 100px;
+            }
+            th {
+                font-size: 10px;
+            }
+        }
+        @media (max-width:386px) {
+
+            .cls{
+                width: 80px;
+            }
+            th {
+                font-size: 8px;
+            }
         }
 
         #previous-button-1,
@@ -150,8 +191,13 @@
             }
 
             button {
-                width: 80%;
-                margin: 10px auto;
+                width: 0%;
+                font-size: 1px;
+                margin: 1px auto;
+            }
+            .image-pair {
+                flex-direction: row;
+                align-items: center;
             }
 
             /* th, td {
@@ -323,7 +369,7 @@
                             <th>
                                 <a href="static/video/cars/car4/input.gif">
                                     <a href="static/video/cars/car4/input.gif">
-                                        <image width="250" src="static/video/cars/car4/input.gif" autoplay loop controls
+                                        <image class="cls" src="static/video/cars/car4/input.gif" autoplay loop controls
                                             muted />
                                     </a>
                                 </a>
@@ -331,7 +377,7 @@
                             <th>
                                 <a href="static/video/cars/car4/slime.gif">
                                     <a href="static/video/cars/car4/slime.gif">
-                                        <image width="250" src="static/video/cars/car4/slime.gif" autoplay loop controls
+                                        <image class="cls" src="static/video/cars/car4/slime.gif" autoplay loop controls
                                             muted />
                                     </a>
                                 </a>
@@ -339,7 +385,7 @@
                             <th>
                                 <a href="static/video/cars/car4/gsam.gif">
                                     <a href="static/video/cars/car4/gsam.gif">
-                                        <image width="250" src="static/video/cars/car4/gsam.gif" autoplay loop controls
+                                        <image class="cls" src="static/video/cars/car4/gsam.gif" autoplay loop controls
                                             muted />
                                     </a>
                                 </a>
@@ -347,7 +393,7 @@
                             <th>
                                 <a href="static/video/cars/car4/div.gif">
                                     <a href="static/video/cars/car4/div.gif">
-                                        <image width="250" src="static/video/cars/car4/div.gif" autoplay loop controls
+                                        <image class="cls" src="static/video/cars/car4/div.gif" autoplay loop controls
                                             muted />
                                     </a>
                                 </a>
@@ -364,7 +410,7 @@
                             <th>
                                 <a href="static/video/cars/car2/input.gif">
                                     <a href="static/video/cars/car2/input.gif">
-                                        <image width="250" src="static/video/cars/car2/input.gif" autoplay loop controls
+                                        <image class="cls" src="static/video/cars/car2/input.gif" autoplay loop controls
                                             muted />
                                     </a>
                                 </a>
@@ -372,7 +418,7 @@
                             <th>
                                 <a href="static/video/cars/car2/slime.gif">
                                     <a href="static/video/cars/car2/slime.gif">
-                                        <image width="250" src="static/video/cars/car2/slime.gif" autoplay loop controls
+                                        <image class="cls" src="static/video/cars/car2/slime.gif" autoplay loop controls
                                             muted />
                                     </a>
                                 </a>
@@ -380,7 +426,7 @@
                             <th>
                                 <a href="static/video/cars/car2/gsam.gif">
                                     <a href="static/video/cars/car2/gsam.gif">
-                                        <image width="250" src="static/video/cars/car2/gsam.gif" autoplay loop controls
+                                        <image class="cls" src="static/video/cars/car2/gsam.gif" autoplay loop controls
                                             muted />
                                     </a>
                                 </a>
@@ -388,7 +434,7 @@
                             <th>
                                 <a href="static/video/cars/car2/div.gif">
                                     <a href="static/video/cars/car2/div.gif">
-                                        <image width="250" src="static/video/cars/car2/div.gif" autoplay loop controls
+                                        <image class="cls" src="static/video/cars/car2/div.gif" autoplay loop controls
                                             muted />
                                     </a>
                                 </a>
@@ -852,30 +898,30 @@
                     <tbody>
 
                         <tr>
-                            <th style="font-size: 16px">Source Image</th>
-                            <th style="font-size: 16px">Source Annotation</th>
-                            <th style="font-size: 16px">XMem++</th>
-                            <th style="font-size: 16px">SMITE (ours)</th>
+                            <th style="font-family: Apple Chancery, Georgia">Source Image</th>
+                            <th style="font-family: Apple Chancery, Georgia">Source Annotation</th>
+                            <th style="font-family: Apple Chancery, Georgia">XMem++</th>
+                            <th style="font-family: Apple Chancery, Georgia">SMITE (ours)</th>
                         </tr>
                         <tr>
                             <th>
                                 <a href="static/video/xmem/frame.png">
                                     <a href="static/video/xmem/frame.png">
-                                        <img width="300" src="static/video/xmem/frame.png" alt="Source Image" />
+                                        <img class="cls" src="static/video/xmem/frame.png" alt="Source Image" />
                                     </a>
                                 </a>
                             </th>
                             <th>
                                 <a href="static/video/xmem/annot.png">
                                     <a href="static/video/xmem/annot.png">
-                                        <img width="300" src="static/video/xmem/annot.png" alt="Source Annotation" />
+                                        <img class="cls" src="static/video/xmem/annot.png" alt="Source Annotation" />
                                     </a>
                                 </a>
                             </th>
                             <th>
                                 <a href="static/video/xmem/xmem.gif">
                                     <a href="static/video/xmem/xmem.gif">
-                                        <image width="300" src="static/video/xmem/xmem.gif" autoplay loop controls
+                                        <image class="cls" src="static/video/xmem/xmem.gif" autoplay loop controls
                                             muted />
                                     </a>
                                 </a>
@@ -883,7 +929,7 @@
                             <th>
                                 <a href="static/video/xmem/smite.gif">
                                     <a href="static/video/xmem/smite.gif">
-                                        <image width="300" src="static/video/xmem/smite.gif" autoplay loop controls
+                                        <image class="cls" src="static/video/xmem/smite.gif" autoplay loop controls
                                             muted />
                                     </a>
                                 </a>
@@ -918,11 +964,11 @@
 
                     <div class="image-pair">
                         <!-- Source Video -->
-                        <img id="source-video-1" width="400" src="static/video/ice_cream1/input.gif" alt="Source Video"
+                        <img id="source-video-1" class="cls" src="static/video/ice_cream1/input.gif" alt="Source Video"
                             autoplay loop controls muted />
 
                         <!-- SMITE Video -->
-                        <img id="smite-video-1" width="400" src="static/video/ice_cream1/div.gif" alt="SMITE (ours)"
+                        <img id="smite-video-1" class="cls" src="static/video/ice_cream1/div.gif" alt="SMITE (ours)"
                             autoplay loop controls muted />
                     </div>
 
@@ -941,11 +987,11 @@
 
                     <div class="image-pair">
                         <!-- Source Video -->
-                        <img id="source-video-2" width="400" src="static/video/ice_cream2/input.gif" alt="Source Video"
+                        <img id="source-video-2" class="cls" src="static/video/ice_cream2/input.gif" alt="Source Video"
                             autoplay loop controls muted />
 
                         <!-- SMITE Video -->
-                        <img id="smite-video-2" width="400" src="static/video/ice_cream2/div.gif" alt="SMITE (ours)"
+                        <img id="smite-video-2" class="cls" src="static/video/ice_cream2/div.gif" alt="SMITE (ours)"
                             autoplay loop controls muted />
                     </div>
 
