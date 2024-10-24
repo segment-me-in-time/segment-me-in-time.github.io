@@ -45,6 +45,10 @@
             font-weight: 700;
             margin-bottom: 20px;
         }
+        .tldr-bold {
+            font-size: 25px;
+            font-weight: bold;
+        }
 
         #image-slider-1 {
             display: flex;
@@ -59,6 +63,27 @@
             justify-content: center;
             margin-top: 20px;
         }
+        
+        #image-slider-3 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        #image-slider-4 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        #image-slider-5 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
 
         .image-pair {
             display: flex;
@@ -67,7 +92,7 @@
         }
 
         .image-pair img {
-            margin: 0 10px;
+            margin: 0 2px;
             /* Adds space between the two images */
         }
 
@@ -87,6 +112,9 @@
             .cls{
                 width: 150px;
             }
+            .image-pair img {
+                width: 150px;
+            }
             th {
                 font-size: 16px;
             }
@@ -95,6 +123,9 @@
         @media (max-width:845px) {
 
             .cls{
+                width: 100px;
+            }
+            .image-pair img {
                 width: 100px;
             }
             th {
@@ -106,6 +137,9 @@
             .cls{
                 width: 80px;
             }
+            .image-pair img {
+                width: 80px;
+            }
             th {
                 font-size: 8px;
             }
@@ -114,7 +148,13 @@
         #previous-button-1,
         #next-button-1,
         #previous-button-2,
-        #next-button-2 {
+        #next-button-2,
+        #previous-button-3,
+        #next-button-3,
+        #previous-button-4,
+        #next-button-4,
+        #previous-button-5,
+        #next-button-5 {
             background-color: #0078c0 !important;
             /* Blue background */
             border: none !important;
@@ -134,7 +174,13 @@
         #previous-button-1:hover,
         #next-button-1:hover,
         #previous-button-2:hover,
-        #next-button-2:hover {
+        #next-button-2:hover,
+        #previous-button-3:hover,
+        #next-button-3:hover,
+        #previous-button-4:hover,
+        #next-button-4:hover,
+        #previous-button-5:hover,
+        #next-button-5:hover {
             background-color: white !important;
             /* White background on hover */
             color: #0078c0 !important;
@@ -175,14 +221,38 @@
 
         /* Mobile layout adjustments */
         @media (max-width: 768px) {
-            .image-pair {
+            .columns {
                 flex-direction: column;
                 align-items: center;
             }
 
-            .columns {
-                flex-direction: column;
-                align-items: center;
+            .image-pair img {
+                width: 70px;
+            }
+
+            h1 {
+                font-size: 1.35rem !important;
+            }
+            h2.title.is-3 {
+                font-size: 1.35rem !important;
+            }
+            #slider-description {
+                font-size: 10px !important;
+            }
+            .is-size-4 {
+                font-size: 0.8rem !important;
+            }
+            .is-size-5 {
+                font-size: 0.7rem !important;
+            }
+            .tldr {
+                font-size: 10px;
+            }
+            .tldr-bold {
+                font-size: 11px;
+            }
+            p {
+                font-size: 10px; /* Smaller font size for small screens */
             }
 
             .column {
@@ -208,12 +278,104 @@
 } */
 
         }
+
+        .image-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 0 1px;
+        }
+
+        .image-container img {
+            display: flex;
+            width: 250px;
+            height: auto;
+            align-items: stretch;
+        }
+
+        .image-caption {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 1px;
+            text-align: center;
+        }
+
+        /* Media Queries */
+        @media (max-width:1072px) {
+            .image-container img {
+                width: 150px;
+            }
+            .image-caption {
+                font-size: 14px;
+            }
+            th {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width:845px) {
+            .image-container img {
+                width: 100px;
+            }
+            .image-caption {
+                font-size: 12px;
+            }
+            th {
+                font-size: 10px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .image-caption {
+                font-size: 8px;
+            }
+            th {
+                font-size: 10px;
+            }
+            #previous-button-1,
+            #next-button-1,
+            #previous-button-2,
+            #next-button-2,
+            #previous-button-3,
+            #next-button-3,
+            #previous-button-4,
+            #next-button-4,
+            #previous-button-5,
+            #next-button-5 {
+                /* White text */
+                padding: 1px !important;
+                text-align: center !important;
+                font-size: 5px !important;
+                width: 12px !important; /* Set a fixed width */
+                height: 10px !important; /* Set a fixed height */
+                margin: 0 1px !important;
+                border-radius: 90% !important;
+                /* Make the button circular */
+            }
+        }
+
+        @media (max-width:386px) {
+            .image-container img {
+                width: 80px;
+            }
+            .image-caption {
+                font-size: 10px;
+            }
+            th {
+                font-size: 8px;
+            }
+        }
+
     </style>
 </head>
 
 <body>
     <section class="hero">
         <div class="hero-body">
+            <div class="has-text-centered">
+                    <img style="max-width:60%" src="static/images/sfu_Wide.png">
+                    <br><br><br>
+            </div>
             <div class="container is-max-desktop">
                 <div class="columns is-centered">
                     <div class="column has-text-centered">
@@ -232,7 +394,7 @@
                             </span>
 
                             <div class="is-size-5">
-                                <span>&nbsp;&nbsp;<sup>1</sup>Simon Fraser University</span>
+                                <span>&nbsp;&nbsp;<sup>1</sup><b>Simon Fraser University</b></span>
                                 <span>&nbsp;&nbsp;<sup>2</sup>Autodesk Research</span>
                                 <span>&nbsp;&nbsp;<sup>3</sup>University of Toronto</span>
                                 <span>&nbsp;&nbsp;<sup>4</sup>Google DeepMind</span>
@@ -278,7 +440,7 @@
     </div>
     <section class="hero teaser">
         <div class="tldr">
-            <b style="font-size:25px">TL;DR : </b> <span></span>
+            <b class="tldr-bold">TL;DR : </b> <span></span>
             <span class="tldr highlight">Segment Any Granularity</span> of a subject in a video <br>
             with <span class="tldr highlight">reference annotation</span> for only <span class="tldr highlight">few
                 frames</span> of the subject.
@@ -314,478 +476,6 @@
                         </p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <div class="columns is-centered">
-                <div class="column is-two-thirds has-text-centered">
-                    <h2 class="title is-3">Methodology</h2>
-                    <img src="./static/images/fig2.png" alt="Method Image">
-                    <br>
-                    <br>
-                    <p align="left">
-                        In this work, we present SMITE, a video segmentation method that enhances pretrained
-                        text-to-image diffusion models with temporal
-                        attention to maintain consistency across video frames. Additionally, we introduce a temporal
-                        voting mechanism (Figure below) that
-                        tracks and projects pixels over attention maps, ensuring consistent labeling for each pixel.
-                        This approach significantly
-                        reduces flickering and noise compared to per-frame segmentation techniques, while still adhering
-                        to reference images. Our
-                        low-pass regularization technique further preserves the segment structure defined by the
-                        attention maps, optimizing it in
-                        alignment with the reference images.
-                    </p>
-                    <br>
-                    <div class="column">
-                        <img src="./static/images/fig4.png" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="section hero is-light">
-        <div class="columns is-centered has-text-centered">
-            <div class="column is-four-fifths">
-                <h2 class="title is-3">Qualitative Results</h2>
-                <!-- <br/> -->
-                <!-- <p style="font-size: 20px" align="left">Wild TI2I - Real images</p> -->
-                <!-- <hr> -->
-                <!-- <br/> -->
-                <table width="3000" align="center">
-                    <tbody>
-
-                        <tr>
-                            <th style="font-family: Apple Chancery, Georgia">Source video</th>
-                            <th style="font-family: Apple Chancery, Georgia">Baseline-I</th>
-                            <th style="font-family: Apple Chancery, Georgia">Grounded SAM 2</th>
-                            <th style="font-family: Apple Chancery, Georgia">SMITE (ours)</th>
-                        </tr>
-                        <tr>
-                            <!-- <h2 align="left" style="padding-left:5%"class="title is-4 ">Example on Cars</h2> -->
-                            <th>
-                                <a href="static/video/cars/car4/input.gif">
-                                    <a href="static/video/cars/car4/input.gif">
-                                        <image class="cls" src="static/video/cars/car4/input.gif" autoplay loop controls
-                                            muted />
-                                    </a>
-                                </a>
-                            </th>
-                            <th>
-                                <a href="static/video/cars/car4/slime.gif">
-                                    <a href="static/video/cars/car4/slime.gif">
-                                        <image class="cls" src="static/video/cars/car4/slime.gif" autoplay loop controls
-                                            muted />
-                                    </a>
-                                </a>
-                            </th>
-                            <th>
-                                <a href="static/video/cars/car4/gsam.gif">
-                                    <a href="static/video/cars/car4/gsam.gif">
-                                        <image class="cls" src="static/video/cars/car4/gsam.gif" autoplay loop controls
-                                            muted />
-                                    </a>
-                                </a>
-                            </th>
-                            <th>
-                                <a href="static/video/cars/car4/div.gif">
-                                    <a href="static/video/cars/car4/div.gif">
-                                        <image class="cls" src="static/video/cars/car4/div.gif" autoplay loop controls
-                                            muted />
-                                    </a>
-                                </a>
-                            </th>
-                        </tr>
-
-                        <tr>
-                            <th style="font-family: Apple Chancery, Georgia">Source video</th>
-                            <th style="font-family: Apple Chancery, Georgia">Baseline-I</th>
-                            <th style="font-family: Apple Chancery, Georgia">Grounded SAM 2</th>
-                            <th style="font-family: Apple Chancery, Georgia">SMITE (ours)</th>
-                        </tr>
-                        <tr>
-                            <th>
-                                <a href="static/video/cars/car2/input.gif">
-                                    <a href="static/video/cars/car2/input.gif">
-                                        <image class="cls" src="static/video/cars/car2/input.gif" autoplay loop controls
-                                            muted />
-                                    </a>
-                                </a>
-                            </th>
-                            <th>
-                                <a href="static/video/cars/car2/slime.gif">
-                                    <a href="static/video/cars/car2/slime.gif">
-                                        <image class="cls" src="static/video/cars/car2/slime.gif" autoplay loop controls
-                                            muted />
-                                    </a>
-                                </a>
-                            </th>
-                            <th>
-                                <a href="static/video/cars/car2/gsam.gif">
-                                    <a href="static/video/cars/car2/gsam.gif">
-                                        <image class="cls" src="static/video/cars/car2/gsam.gif" autoplay loop controls
-                                            muted />
-                                    </a>
-                                </a>
-                            </th>
-                            <th>
-                                <a href="static/video/cars/car2/div.gif">
-                                    <a href="static/video/cars/car2/div.gif">
-                                        <image class="cls" src="static/video/cars/car2/div.gif" autoplay loop controls
-                                            muted />
-                                    </a>
-                                </a>
-                            </th>
-                        </tr>
-
-
-                        <tr>
-                            <th style="font-family: Apple Chancery, Georgia">Source video</th>
-                            <th style="font-family: Apple Chancery, Georgia">Baseline-I</th>
-                            <th style="font-family: Apple Chancery, Georgia">Grounded SAM 2</th>
-                            <th style="font-family: Apple Chancery, Georgia">SMITE (ours)</th>
-                        </tr>
-                        <tr>
-                            <th>
-                                <a href="static/video/cars/car1/input.gif">
-                                    <a href="static/video/cars/car1/input.gif">
-                                        <image class="cls" src="static/video/cars/car1/input.gif" autoplay loop controls
-                                            muted />
-                                    </a>
-                                </a>
-                            </th>
-                            <th>
-                                <a href="static/video/cars/car1/slime.gif">
-                                    <a href="static/video/cars/car1/slime.gif">
-                                        <image class="cls" src="static/video/cars/car1/slime.gif" autoplay loop controls
-                                            muted />
-                                    </a>
-                                </a>
-                            </th>
-                            <th>
-                                <a href="static/video/cars/car1/gsam.gif">
-                                    <a href="static/video/cars/car1/gsam.gif">
-                                        <image class="cls" src="static/video/cars/car1/gsam.gif" autoplay loop controls
-                                            muted />
-                                    </a>
-                                </a>
-                            </th>
-                            <th>
-                                <a href="static/video/cars/car1/div.gif">
-                                    <a href="static/video/cars/car1/div.gif">
-                                        <image class="cls" src="static/video/cars/car1/div.gif" autoplay loop controls
-                                            muted />
-                                    </a>
-                                </a>
-                            </th>
-                        </tr>
-
-
-
-                        <tr>
-                            <th style="font-family: Apple Chancery, Georgia">Source video</th>
-                            <th style="font-family: Apple Chancery, Georgia">Baseline-I</th>
-                            <th style="font-family: Apple Chancery, Georgia">Grounded SAM 2</th>
-                            <th style="font-family: Apple Chancery, Georgia">SMITE (ours)</th>
-                        </tr>
-                        <tr>
-                            <!-- <h2 align="left" style="padding-left:5%"class="title is-4 ">Example on Human Faces</h2> -->
-                            <th>
-                                <a href="static/video/faces/face1/input.gif">
-                                    <a href="static/video/faces/face1/input.gif">
-                                        <image class="cls" src="static/video/faces/face1/input.gif" autoplay loop
-                                            controls muted />
-                                    </a>
-                                </a>
-                            </th>
-                            <th>
-                                <a href="static/video/faces/face1/slime.gif">
-                                    <a href="static/video/faces/face1/slime.gif">
-                                        <image class="cls" src="static/video/faces/face1/slime.gif" autoplay loop
-                                            controls muted />
-                                    </a>
-                                </a>
-                            </th>
-                            <th>
-                                <a href="static/video/faces/face1/gsam.gif">
-                                    <a href="static/video/faces/face1/gsam.gif">
-                                        <image class="cls" src="static/video/faces/face1/gsam.gif" autoplay loop
-                                            controls muted />
-                                    </a>
-                                </a>
-                            </th>
-                            <th>
-                                <a href="static/video/faces/face1/div.gif">
-                                    <a href="static/video/faces/face1/div.gif">
-                                        <image class="cls" src="static/video/faces/face1/div.gif" autoplay loop controls
-                                            muted />
-                                    </a>
-                                </a>
-                            </th>
-                        </tr>
-
-
-                        <tr>
-                            <th style="font-family: Apple Chancery, Georgia">Source video</th>
-                            <th style="font-family: Apple Chancery, Georgia">Baseline-I</th>
-                            <th style="font-family: Apple Chancery, Georgia">Grounded SAM 2</th>
-                            <th style="font-family: Apple Chancery, Georgia">SMITE (ours)</th>
-                        </tr>
-                        <tr>
-                            <th>
-                                <a href="static/video/faces/face2/input.gif">
-                                    <a href="static/video/faces/face2/input.gif">
-                                        <image class="cls" src="static/video/faces/face2/input.gif" autoplay loop
-                                            controls muted />
-                                    </a>
-                                </a>
-                            </th>
-                            <th>
-                                <a href="static/video/faces/face2/slime.gif">
-                                    <a href="static/video/faces/face2/slime.gif">
-                                        <image class="cls" src="static/video/faces/face2/slime.gif" autoplay loop
-                                            controls muted />
-                                    </a>
-                                </a>
-                            </th>
-                            <th>
-                                <a href="static/video/faces/face2/gsam.gif">
-                                    <a href="static/video/faces/face2/gsam.gif">
-                                        <image class="cls" src="static/video/faces/face2/gsam.gif" autoplay loop
-                                            controls muted />
-                                    </a>
-                                </a>
-                            </th>
-                            <th>
-                                <a href="static/video/faces/face2/div.gif">
-                                    <a href="static/video/faces/face2/div.gif">
-                                        <image class="cls" src="static/video/faces/face2/div.gif" autoplay loop controls
-                                            muted />
-                                    </a>
-                                </a>
-                            </th>
-                        </tr>
-
-                        <tr>
-                            <th style="font-family: Apple Chancery, Georgia">Source video</th>
-                            <th style="font-family: Apple Chancery, Georgia">Baseline-I</th>
-                            <th style="font-family: Apple Chancery, Georgia">Grounded SAM 2</th>
-                            <th style="font-family: Apple Chancery, Georgia">SMITE (ours)</th>
-                        </tr>
-                        <tr>
-                            <th>
-                                <a href="static/video/faces/face3/input.gif">
-                                    <a href="static/video/faces/face3/input.gif">
-                                        <image class="cls" src="static/video/faces/face3/input.gif" autoplay loop
-                                            controls muted />
-                                    </a>
-                                </a>
-                            </th>
-                            <th>
-                                <a href="static/video/faces/face3/slime.gif">
-                                    <a href="static/video/faces/face3/slime.gif">
-                                        <image class="cls" src="static/video/faces/face3/slime.gif" autoplay loop
-                                            controls muted />
-                                    </a>
-                                </a>
-                            </th>
-                            <th>
-                                <a href="static/video/faces/face3/gsam.gif">
-                                    <a href="static/video/faces/face3/gsam.gif">
-                                        <image class="cls" src="static/video/faces/face3/gsam.gif" autoplay loop
-                                            controls muted />
-                                    </a>
-                                </a>
-                            </th>
-                            <th>
-                                <a href="static/video/faces/face3/div.gif">
-                                    <a href="static/video/faces/face3/div.gif">
-                                        <image class="cls" src="static/video/faces/face3/div.gif" autoplay loop controls
-                                            muted />
-                                    </a>
-                                </a>
-                            </th>
-                        </tr>
-
-
-                        <tr>
-                            <th style="font-family: Apple Chancery, Georgia">Source video</th>
-                            <th style="font-family: Apple Chancery, Georgia">Baseline-I</th>
-                            <th style="font-family: Apple Chancery, Georgia">Grounded SAM 2</th>
-                            <th style="font-family: Apple Chancery, Georgia">SMITE (ours)</th>
-                        </tr>
-                        <tr>
-
-                            <th>
-                                <a href="static/video/faces/face4/input.gif">
-                                    <a href="static/video/faces/face4/input.gif">
-                                        <image class="cls" src="static/video/faces/face4/input.gif" autoplay loop
-                                            controls muted />
-                                    </a>
-                                </a>
-                            </th>
-                            <th>
-                                <a href="static/video/faces/face4/slime.gif">
-                                    <a href="static/video/faces/face4/slime.gif">
-                                        <image class="cls" src="static/video/faces/face4/slime.gif" autoplay loop
-                                            controls muted />
-                                    </a>
-                                </a>
-                            </th>
-                            <th>
-                                <a href="static/video/faces/face4/gsam.gif">
-                                    <a href="static/video/faces/face4/gsam.gif">
-                                        <image class="cls" src="static/video/faces/face4/gsam.gif" autoplay loop
-                                            controls muted />
-                                    </a>
-                                </a>
-                            </th>
-                            <th>
-                                <a href="static/video/faces/face4/div.gif">
-                                    <a href="static/video/faces/face4/div.gif">
-                                        <image class="cls" src="static/video/faces/face4/div.gif" autoplay loop controls
-                                            muted />
-                                    </a>
-                                </a>
-                            </th>
-                        </tr>
-
-
-                        <tr>
-                            <th style="font-family: Apple Chancery, Georgia">Source video</th>
-                            <th style="font-family: Apple Chancery, Georgia">Baseline-I</th>
-                            <th style="font-family: Apple Chancery, Georgia">Grounded SAM 2</th>
-                            <th style="font-family: Apple Chancery, Georgia">SMITE (ours)</th>
-                        </tr>
-                        <tr>
-
-                            <th>
-                                <a href="static/video/horses/horse4/input.gif">
-                                    <a href="static/video/horses/horse4/input.gif">
-                                        <image class="cls" src="static/video/horses/horse4/input.gif" autoplay loop
-                                            controls muted />
-                                    </a>
-                                </a>
-                            </th>
-                            <th>
-                                <a href="static/video/horses/horse4/slime.gif">
-                                    <a href="static/video/horses/horse4/slime.gif">
-                                        <image class="cls" src="static/video/horses/horse4/slime.gif" autoplay loop
-                                            controls muted />
-                                    </a>
-                                </a>
-                            </th>
-                            <th>
-                                <a href="static/video/horses/horse4/gsam.gif">
-                                    <a href="static/video/horses/horse4/gsam.gif">
-                                        <image class="cls" src="static/video/horses/horse4/gsam.gif" autoplay loop
-                                            controls muted />
-                                    </a>
-                                </a>
-                            </th>
-                            <th>
-                                <a href="static/video/horses/horse4/div.gif">
-                                    <a href="static/video/horses/horse4/div.gif">
-                                        <image class="cls" src="static/video/horses/horse4/div.gif" autoplay loop
-                                            controls muted />
-                                    </a>
-                                </a>
-                            </th>
-                        </tr>
-
-                        <tr>
-                            <th style="font-family: Apple Chancery, Georgia">Source video</th>
-                            <th style="font-family: Apple Chancery, Georgia">Baseline-I</th>
-                            <th style="font-family: Apple Chancery, Georgia">Grounded SAM 2</th>
-                            <th style="font-family: Apple Chancery, Georgia">SMITE (ours)</th>
-                        </tr>
-                        <tr>
-                            <th>
-                                <a href="static/video/horses/horse1/input.gif">
-                                    <a href="static/video/horses/horse1/input.gif">
-                                        <image class="cls" src="static/video/horses/horse1/input.gif" autoplay loop
-                                            controls muted />
-                                    </a>
-                                </a>
-                            </th>
-                            <th>
-                                <a href="static/video/horses/horse1/slime.gif">
-                                    <a href="static/video/horses/horse1/slime.gif">
-                                        <image class="cls" src="static/video/horses/horse1/slime.gif" autoplay loop
-                                            controls muted />
-                                    </a>
-                                </a>
-                            </th>
-                            <th>
-                                <a href="static/video/horses/horse1/gsam.gif">
-                                    <a href="static/video/horses/horse1/gsam.gif">
-                                        <image class="cls" src="static/video/horses/horse1/gsam.gif" autoplay loop
-                                            controls muted />
-                                    </a>
-                                </a>
-                            </th>
-                            <th>
-                                <a href="static/video/horses/horse1/div.gif">
-                                    <a href="static/video/horses/horse1/div.gif">
-                                        <image class="cls" src="static/video/horses/horse1/div.gif" autoplay loop
-                                            controls muted />
-                                    </a>
-                                </a>
-                            </th>
-                        </tr>
-
-                        <tr>
-                            <th style="font-family: Apple Chancery, Georgia">Source video</th>
-                            <th style="font-family: Apple Chancery, Georgia">Baseline-I</th>
-                            <th style="font-family: Apple Chancery, Georgia">Grounded SAM 2</th>
-                            <th style="font-family: Apple Chancery, Georgia">SMITE (ours)</th>
-                        </tr>
-                        <tr>
-                            <th>
-                                <a href="static/video/horses/horse3/input.gif">
-                                    <a href="static/video/horses/horse3/input.gif">
-                                        <image class="cls" src="static/video/horses/horse3/input.gif" autoplay loop
-                                            controls muted />
-                                    </a>
-                                </a>
-                            </th>
-                            <p> </p>
-                            <th>
-                                <a href="static/video/horses/horse3/slime.gif">
-                                    <a href="static/video/horses/horse3/slime.gif">
-                                        <image class="cls" src="static/video/horses/horse3/slime.gif" autoplay loop
-                                            controls muted />
-                                    </a>
-                                </a>
-                            </th>
-                            <p> </p>
-                            <th>
-                                <a href="static/video/horses/horse3/gsam.gif">
-                                    <a href="static/video/horses/horse3/gsam.gif">
-                                        <image class="cls" src="static/video/horses/horse3/gsam.gif" autoplay loop
-                                            controls muted />
-                                    </a>
-                                </a>
-                            </th>
-                            <p> </p>
-                            <th>
-                                <a href="static/video/horses/horse3/div.gif">
-                                    <a href="static/video/horses/horse3/div.gif">
-                                        <image class="cls" src="static/video/horses/horse3/div.gif" autoplay loop
-                                            controls muted />
-                                    </a>
-                                </a>
-                            </th>
-                        </tr>
-
-                    </tbody>
-                </table>
-
-                </tbody>
-                </table>
             </div>
         </div>
     </section>
@@ -884,68 +574,6 @@
     </section>
 
     <section class="section hero is-light">
-        <div class="columns is-centered has-text-centered">
-            <div class="column is-four-fifths">
-                <h2 class="title is-3">Comparison with XMem++</h2>
-                <!-- <br/> -->
-                <!-- <p style="font-size: 20px" align="left">Wild TI2I - Real images</p> -->
-                <!-- <hr> -->
-                <!-- <br/> -->
-                <p style="font-size: 20px; text-align:center;" id="slider-description">Using a Single Reference Image on
-                    a Long Video (Over 1,000 Frames, Video Speed Increased by 4x)</p>
-                    <br>
-                <table width="3000" align="center">
-                    <tbody>
-
-                        <tr>
-                            <th style="font-family: Apple Chancery, Georgia">Source Image</th>
-                            <th style="font-family: Apple Chancery, Georgia">Source Annotation</th>
-                            <th style="font-family: Apple Chancery, Georgia">XMem++</th>
-                            <th style="font-family: Apple Chancery, Georgia">SMITE (ours)</th>
-                        </tr>
-                        <tr>
-                            <th>
-                                <a href="static/video/xmem/frame.png">
-                                    <a href="static/video/xmem/frame.png">
-                                        <img class="cls" src="static/video/xmem/frame.png" alt="Source Image" />
-                                    </a>
-                                </a>
-                            </th>
-                            <th>
-                                <a href="static/video/xmem/annot.png">
-                                    <a href="static/video/xmem/annot.png">
-                                        <img class="cls" src="static/video/xmem/annot.png" alt="Source Annotation" />
-                                    </a>
-                                </a>
-                            </th>
-                            <th>
-                                <a href="static/video/xmem/xmem.gif">
-                                    <a href="static/video/xmem/xmem.gif">
-                                        <image class="cls" src="static/video/xmem/xmem.gif" autoplay loop controls
-                                            muted />
-                                    </a>
-                                </a>
-                            </th>
-                            <th>
-                                <a href="static/video/xmem/smite.gif">
-                                    <a href="static/video/xmem/smite.gif">
-                                        <image class="cls" src="static/video/xmem/smite.gif" autoplay loop controls
-                                            muted />
-                                    </a>
-                                </a>
-                            </th>
-                        </tr>
-
-                    </tbody>
-                </table>
-
-                </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-
-    <section class="section hero">
         <div class="columns is-centered">
             <div class="column is-two-thirds has-text-centered">
                 <h2 class="title is-3">Challenging Scenarios</h2>
@@ -1005,6 +633,205 @@
         </div>
     </section>
 
+    <section class="section">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-two-thirds has-text-centered">
+                    <h2 class="title is-3">Methodology</h2>
+                    <p align="left">
+                        In this work, we present SMITE, a video segmentation method that enhances pretrained
+                        text-to-image diffusion models with temporal
+                        attention to maintain consistency across video frames. Additionally, we introduce a temporal
+                        voting mechanism (Figure in the paper) that
+                        tracks and projects pixels over attention maps, ensuring consistent labeling for each pixel.
+                        This approach significantly
+                        reduces flickering and noise compared to per-frame segmentation techniques, while still adhering
+                        to reference images. Our
+                        low-pass regularization technique further preserves the segment structure defined by the
+                        attention maps, optimizing it in
+                        alignment with the reference images.
+                    </p>
+                    <br>
+                    <div class="column">
+                        <img src="./static/images/fig2.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section hero is-light">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Qualitative Results</h2>
+                <!-- <br/> -->
+                <!-- <p style="font-size: 20px" align="left">Wild TI2I - Real images</p> -->
+                <!-- <hr> -->
+                <!-- <br/> -->
+                <div id="image-slider-3" class="image-slider">
+                    <button id="previous-button-3" onclick="changeImage(3, -1)">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+    
+                    <div class="image-pair">
+                        <p style="font-size: 20px; text-align:center;" id="slider-description-3"></p>
+                        <!-- Source Video -->
+                        <div class="image-container">
+                            <p class="image-caption"> <b> Source Video </b>
+                            <img id="source-video-3" class="cls" src="static/video/cars/car4/input.gif" alt="Source Video" autoplay loop controls muted />
+                        </div>
+                        <div class="image-container">
+                            <p class="image-caption"> <b> Baseline-I </b>
+                            <img id="baseline-video-3" class="cls" src="static/video/cars/car4/slime.gif" alt="Source Video" autoplay loop controls muted />
+                        </div>
+                        <div class="image-container">
+                            <p class="image-caption"> <b> Grounded SAM 2 </b>
+                            <img id="grounded-sam-video-3" class="cls" src="static/video/cars/car4/gsam.gif" alt="Source Video" autoplay loop controls muted />
+                        </div>
+                        <div class="image-container">
+                            <p class="image-caption"> <b> SMITE (ours) </b>
+                            <img id="smite-video-3" class="cls" src="static/video/cars/car4/div.gif" alt="Source Video" autoplay loop controls muted />
+                        </div>
+                    </div>
+    
+                    <button id="next-button-3" onclick="changeImage(3, 1)">
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                
+                <div id="image-slider-4" class="image-slider">
+                    <button id="previous-button-4" onclick="changeImage(4, -1)">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+    
+                    <div class="image-pair">
+                        <p style="font-size: 20px; text-align:center;" id="slider-description-4"></p>
+                        <!-- Source Video -->
+                        <div class="image-container">
+                            <p class="image-caption"> <b> Source Video </b>
+                            <img id="source-video-4" class="cls" src="static/video/faces/face3/input.gif" alt="Source Video" autoplay loop controls muted />
+                        </div>
+                        <div class="image-container">
+                            <p class="image-caption"> <b> Baseline-I </b>
+                            <img id="baseline-video-4" class="cls" src="static/video/faces/face3/slime.gif" alt="Baseline-I" autoplay loop controls muted />
+                        </div>
+                        <div class="image-container">
+                            <p class="image-caption"> <b> Grounded SAM 2 </b>
+                            <img id="grounded-sam-video-4" class="cls" src="static/video/faces/face3/gsam.gif" alt="Grounded SAM 2" autoplay loop controls muted />
+                        </div>
+                        <div class="image-container">
+                            <p class="image-caption"> <b> SMITE (ours) </b>
+                            <img id="smite-video-4" class="cls" src="static/video/faces/face3/div.gif" alt="SMITE (ours)" autoplay loop controls muted />
+                        </div>
+                    </div>
+    
+                    <button id="next-button-4" onclick="changeImage(4, 1)">
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <div id="image-slider-5" class="image-slider">
+                    <button id="previous-button-5" onclick="changeImage(5, -1)">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+
+                    <div class="image-pair">
+                        <p style="font-size: 20px; text-align:center;" id="slider-description-5"></p>
+                        <!-- Source Video -->
+                        <div class="image-container">
+                            <p class="image-caption"> <b> Source Video </b>
+                            <img id="source-video-5" class="cls" src="static/video/horses/horse3/input.gif" alt="Source Video" autoplay loop controls muted />
+                        </div>
+                        <div class="image-container">
+                            <p class="image-caption"> <b> Baseline-I </b>
+                            <img id="baseline-video-5" class="cls" src="static/video/horses/horse3/slime.gif" alt="Baseline-I" autoplay loop controls muted />
+                        </div>
+                        <div class="image-container">
+                            <p class="image-caption"> <b> Grounded SAM 2 </b>
+                            <img id="grounded-sam-video-5" class="cls" src="static/video/horses/horse3/gsam.gif" alt="Grounded SAM 2" autoplay loop controls muted />
+                        </div>
+                        <div class="image-container">
+                            <p class="image-caption"> <b> SMITE (ours) </b>
+                            <img id="smite-video-5" class="cls" src="static/video/horses/horse3/div.gif" alt="SMITE (ours)" autoplay loop controls muted />
+                        </div>
+                    </div>
+    
+                    <button id="next-button-5" onclick="changeImage(5, 1)">
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                    </tbody>
+                </table>
+
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section hero">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Comparison with XMem++</h2>
+                <!-- <br/> -->
+                <!-- <p style="font-size: 20px" align="left">Wild TI2I - Real images</p> -->
+                <!-- <hr> -->
+                <!-- <br/> -->
+                <p style="font-size: 20px; text-align:center;" id="slider-description">Using a Single Reference Image on
+                    a Long Video (Over 1,000 Frames, Video Speed Increased by 4x)</p>
+                    <br>
+                <table width="3000" align="center">
+                    <tbody>
+
+                        <tr>
+                            <th class="image-caption">Source Image</th>
+                            <th class="image-caption">Source Annotation</th>
+                            <th class="image-caption">XMem++</th>
+                            <th class="image-caption">SMITE (ours)</th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <a href="static/video/xmem/frame.png">
+                                    <a href="static/video/xmem/frame.png">
+                                        <img class="cls" src="static/video/xmem/frame.png" alt="Source Image" />
+                                    </a>
+                                </a>
+                            </th>
+                            <th>
+                                <a href="static/video/xmem/annot.png">
+                                    <a href="static/video/xmem/annot.png">
+                                        <img class="cls" src="static/video/xmem/annot.png" alt="Source Annotation" />
+                                    </a>
+                                </a>
+                            </th>
+                            <th>
+                                <a href="static/video/xmem/xmem.gif">
+                                    <a href="static/video/xmem/xmem.gif">
+                                        <image class="cls" src="static/video/xmem/xmem.gif" autoplay loop controls
+                                            muted />
+                                    </a>
+                                </a>
+                            </th>
+                            <th>
+                                <a href="static/video/xmem/smite.gif">
+                                    <a href="static/video/xmem/smite.gif">
+                                        <image class="cls" src="static/video/xmem/smite.gif" autoplay loop controls
+                                            muted />
+                                    </a>
+                                </a>
+                            </th>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
     <section class="section hero is-light">
         <div class="columns is-centered">
             <div class="column is-four-fifths has-text-centered">
@@ -1037,7 +864,7 @@
     <!--BibTex citation -->
     <section class="section" id="BibTeX">
         <div class="container is-max-desktop content">
-            <h2 class="title">BibTeX</h2>
+            <h2 class="title is-3">BibTeX</h2>
             <pre><code>@article{alimohammadi2024smite,
             title={SMITE:Segment Me in Time},
             author={Names},
@@ -1074,6 +901,9 @@
     <script>
         let currentImageIndex1 = 0;
         let currentImageIndex2 = 0;
+        let currentImageIndex3 = 0;
+        let currentImageIndex4 = 0;
+        let currentImageIndex5 = 0;
 
         // Array of objects for paired images and their descriptions
         const sliderData1 = [
@@ -1098,7 +928,6 @@
                 description: ""
             }
         ];
-
         const sliderData2 = [
             {
                 source: "static/video/pineapple1/input.gif",
@@ -1111,11 +940,80 @@
                 description: "SMITE works even when the object is split into two pieces."
             }
         ]
+        const sliderData3 = [
+            {
+                source: "static/video/cars/car4/input.gif",
+                baseline: "static/video/cars/car4/slime.gif",
+                grounded_sam: "static/video/cars/car4/div.gif",
+                smite: "static/video/cars/car4/div.gif",
+                description: ""
+            },
+            {
+                source: "static/video/cars/car2/input.gif",
+                baseline: "static/video/cars/car2/slime.gif",
+                grounded_sam: "static/video/cars/car2/gsam.gif",
+                smite: "static/video/cars/car2/div.gif",
+                description: ""
+            },
+            {
+                source: "static/video/cars/car1/input.gif",
+                baseline: "static/video/cars/car1/slime.gif",
+                grounded_sam: "static/video/cars/car1/gsam.gif",
+                smite: "static/video/cars/car1/div.gif",
+                description: ""
+            }
+        ];
+        const sliderData4 = [
+            {
+                source: "static/video/faces/face3/input.gif",
+                baseline: "static/video/faces/face3/slime.gif",
+                grounded_sam: "static/video/faces/face3/gsam.gif",
+                smite: "static/video/faces/face3/div.gif",
+                description: ""
+            },
+            {
+                source: "static/video/faces/face4/input.gif",
+                baseline: "static/video/faces/face4/slime.gif",
+                grounded_sam: "static/video/faces/face4/gsam.gif",
+                smite: "static/video/faces/face4/div.gif",
+                description: ""
+            },
+            {
+                source: "static/video/faces/face2/input.gif",
+                baseline: "static/video/faces/face2/slime.gif",
+                grounded_sam: "static/video/faces/face2/gsam.gif",
+                smite: "static/video/faces/face2/div.gif",
+                description: ""
+            }
+        ];
+        const sliderData5 = [
+            {
+                source: "static/video/horses/horse3/input.gif",
+                baseline: "static/video/horses/horse3/slime.gif",
+                grounded_sam: "static/video/horses/horse3/gsam.gif",
+                smite: "static/video/horses/horse3/div.gif",
+                description: ""
+            },
+            {
+                source: "static/video/horses/horse1/input.gif",
+                baseline: "static/video/horses/horse1/slime.gif",
+                grounded_sam: "static/video/horses/horse1/gsam.gif",
+                smite: "static/video/horses/horse1/div.gif",
+                description: ""
+            },
+            {
+                source: "static/video/horses/horse4/input.gif",
+                baseline: "static/video/horses/horse4/slime.gif",
+                grounded_sam: "static/video/horses/horse4/gsam.gif",
+                smite: "static/video/horses/horse4/div.gif",
+                description: ""
+            }
+        ];
 
         function updateSlider(sliderNumber) {
             let currentIndex, sliderData, sourceVideoId, smiteVideoId, descriptionId;
+            let baselineVideoId, groundedSamVideoId;
 
-            // Determine which slider to update based on sliderNumber
             if (sliderNumber === 1) {
                 currentIndex = currentImageIndex1;
                 sliderData = sliderData1;
@@ -1128,33 +1026,69 @@
                 sourceVideoId = 'source-video-2';
                 smiteVideoId = 'smite-video-2';
                 descriptionId = 'slider-description-2';
+            } else if (sliderNumber === 3) {
+                currentIndex = currentImageIndex3;
+                sliderData = sliderData3;
+                sourceVideoId = 'source-video-3';
+                baselineVideoId = 'baseline-video-3';
+                groundedSamVideoId = 'grounded-sam-video-3';
+                smiteVideoId = 'smite-video-3';
+                descriptionId = 'slider-description-3';
+            } else if (sliderNumber === 4) {
+                currentIndex = currentImageIndex4;
+                sliderData = sliderData4;
+                sourceVideoId = 'source-video-4';
+                baselineVideoId = 'baseline-video-4';
+                groundedSamVideoId = 'grounded-sam-video-4';
+                smiteVideoId = 'smite-video-4';
+                descriptionId = 'slider-description-4';
+            } else if (sliderNumber === 5) {
+                currentIndex = currentImageIndex5;
+                sliderData = sliderData5;
+                sourceVideoId = 'source-video-5';
+                baselineVideoId = 'baseline-video-5';
+                groundedSamVideoId = 'grounded-sam-video-5';
+                smiteVideoId = 'smite-video-5';
+                descriptionId = 'slider-description-5';
             }
-            // Update the slider's images and description
+
+            // Set the source for the images
             document.getElementById(sourceVideoId).src = sliderData[currentIndex].source;
             document.getElementById(smiteVideoId).src = sliderData[currentIndex].smite;
             document.getElementById(descriptionId).textContent = sliderData[currentIndex].description;
+
+            if (sliderNumber === 3 || sliderNumber === 4 || sliderNumber === 5) {
+                document.getElementById(baselineVideoId).src = sliderData[currentIndex].baseline;
+                document.getElementById(groundedSamVideoId).src = sliderData[currentIndex].grounded_sam;
+            }
         }
 
         function changeImage(sliderNumber, direction) {
             if (sliderNumber === 1) {
-                currentImageIndex1 += direction;
-                // Handle out of bounds logic
-                if (currentImageIndex1 < 0) currentImageIndex1 = sliderData1.length - 1;
-                if (currentImageIndex1 >= sliderData1.length) currentImageIndex1 = 0;
+                currentImageIndex1 = (currentImageIndex1 + direction + sliderData1.length) % sliderData1.length;
                 updateSlider(1);
             } else if (sliderNumber === 2) {
-                currentImageIndex2 += direction;
-                // Handle out of bounds logic
-                if (currentImageIndex2 < 0) currentImageIndex2 = sliderData2.length - 1;
-                if (currentImageIndex2 >= sliderData2.length) currentImageIndex2 = 0;
+                currentImageIndex2 = (currentImageIndex2 + direction + sliderData2.length) % sliderData2.length;
                 updateSlider(2);
+            } else if (sliderNumber === 3) {
+                currentImageIndex3 = (currentImageIndex3 + direction + sliderData3.length) % sliderData3.length;
+                updateSlider(3);
+            } else if (sliderNumber === 4) {
+                currentImageIndex4 = (currentImageIndex4 + direction + sliderData4.length) % sliderData4.length;
+                updateSlider(4);
+            } else if (sliderNumber === 5) {
+                currentImageIndex5 = (currentImageIndex5 + direction + sliderData5.length) % sliderData5.length;
+                updateSlider(5);
             }
         }
 
-        // Initialize the slider on page load
+        // Initialize the sliders on page load
         window.onload = function () {
             updateSlider(1);
             updateSlider(2);
+            updateSlider(3);
+            updateSlider(4);
+            updateSlider(5);
         };
 
     </script>
