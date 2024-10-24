@@ -107,6 +107,23 @@
             width: 250px;
         }
 
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background-color: #000;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
         @media (max-width:1072px) {
 
             .cls{
@@ -373,7 +390,7 @@
     <section class="hero">
         <div class="hero-body">
             <div class="has-text-centered">
-                    <img style="max-width:60%" src="static/images/sfu_Wide.png">
+                    <img style="max-width:50%" src="static/images/sfu_Wide.png">
                     <br><br><br>
             </div>
             <div class="container is-max-desktop">
@@ -405,7 +422,7 @@
                                     <span class="icon"><i class="fas fa-file-pdf"></i></span>
                                     <span>Paper</span>
                                 </a>
-                                <a href="https://github.com/alimohammadiamirhossein/smite/" target="_blank" class="button is-rounded is-dark">
+                                <a href="https://github.com/" target="_blank" class="button is-rounded is-dark">
                                     <span class="icon"><i class="fab fa-github"></i></span>
                                     <span>Code</span>
                                 </a>
@@ -446,12 +463,14 @@
                 frames</span> of the subject.
         </div>
         <div class="container is-max-desktop">
-            <div class="hero-body">
-                <video poster="" id="tree" autoplay controls muted loop height="100%">
-                    <!-- Your video here -->
-                    <source src="static/video/comming_soon.mp4" type="video/mp4">
-                </video>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/4ZnJlzyJnUk?si=apCuSlY73CZK8Hga" 
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+                    clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
             </div>
+            <p class="has-text-centered">The audio track for this teaser video was generated with the help of Suno.</p>
         </div>
     </section>
 
