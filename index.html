@@ -45,6 +45,7 @@
             font-weight: 700;
             margin-bottom: 20px;
         }
+
         .tldr-bold {
             font-size: 25px;
             font-weight: bold;
@@ -63,7 +64,7 @@
             justify-content: center;
             margin-top: 20px;
         }
-        
+
         #image-slider-3 {
             display: flex;
             align-items: center;
@@ -102,14 +103,15 @@
             height: 2px;
             font-size: 18px;
         }
-        
-        .cls{
+
+        .cls {
             width: 250px;
         }
 
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            padding-bottom: 56.25%;
+            /* 16:9 aspect ratio */
             height: 0;
             overflow: hidden;
             max-width: 100%;
@@ -127,12 +129,14 @@
 
         @media (max-width:1072px) {
 
-            .cls{
+            .cls {
                 width: 150px;
             }
+
             .image-pair img {
                 width: 150px;
             }
+
             th {
                 font-size: 16px;
             }
@@ -140,27 +144,33 @@
 
         @media (max-width:845px) {
 
-            .cls{
+            .cls {
                 width: 100px;
             }
+
             .image-pair img {
                 width: 100px;
             }
+
             th {
                 font-size: 10px;
             }
+
             .video-container {
                 min-width: 300px;
             }
         }
+
         @media (max-width:386px) {
 
-            .cls{
+            .cls {
                 width: 80px;
             }
+
             .image-pair img {
                 width: 80px;
             }
+
             th {
                 font-size: 8px;
             }
@@ -254,26 +264,34 @@
             h1 {
                 font-size: 1.35rem !important;
             }
+
             h2.title.is-3 {
                 font-size: 1.35rem !important;
             }
+
             #slider-description {
                 font-size: 10px !important;
             }
+
             .is-size-4 {
                 font-size: 0.8rem !important;
             }
+
             .is-size-5 {
                 font-size: 0.7rem !important;
             }
+
             .tldr {
                 font-size: 10px;
             }
+
             .tldr-bold {
                 font-size: 11px;
             }
+
             p {
-                font-size: 10px; /* Smaller font size for small screens */
+                font-size: 10px;
+                /* Smaller font size for small screens */
             }
 
             .column {
@@ -286,6 +304,7 @@
                 font-size: 1px;
                 margin: 1px auto;
             }
+
             .image-pair {
                 flex-direction: row;
                 align-items: center;
@@ -326,9 +345,11 @@
             .image-container img {
                 width: 150px;
             }
+
             .image-caption {
                 font-size: 14px;
             }
+
             th {
                 font-size: 16px;
             }
@@ -338,21 +359,25 @@
             .image-container img {
                 width: 100px;
             }
+
             .image-caption {
                 font-size: 12px;
             }
+
             th {
                 font-size: 10px;
             }
         }
-        
+
         @media (max-width: 768px) {
             .image-caption {
                 font-size: 8px;
             }
+
             th {
                 font-size: 10px;
             }
+
             #previous-button-1,
             #next-button-1,
             #previous-button-2,
@@ -367,8 +392,10 @@
                 padding: 1px !important;
                 text-align: center !important;
                 font-size: 5px !important;
-                width: 12px !important; /* Set a fixed width */
-                height: 10px !important; /* Set a fixed height */
+                width: 12px !important;
+                /* Set a fixed width */
+                height: 10px !important;
+                /* Set a fixed height */
                 margin: 0 1px !important;
                 border-radius: 90% !important;
                 /* Make the button circular */
@@ -379,14 +406,15 @@
             .image-container img {
                 width: 80px;
             }
+
             .image-caption {
                 font-size: 10px;
             }
+
             th {
                 font-size: 8px;
             }
         }
-
     </style>
 </head>
 
@@ -394,8 +422,8 @@
     <section class="hero">
         <div class="hero-body">
             <div class="has-text-centered">
-                    <img style="max-width:50%" src="static/images/sfu_Wide.png">
-                    <br><br><br>
+                <img style="max-width:50%" src="static/images/sfu_Wide.png">
+                <br><br>
             </div>
             <div class="container is-max-desktop">
                 <div class="columns is-centered">
@@ -420,13 +448,19 @@
                                 <span>&nbsp;&nbsp;<sup>3</sup>University of Toronto</span>
                                 <span>&nbsp;&nbsp;<sup>4</sup>Google DeepMind</span>
                             </div>
-                            <br>
+
+                            <div class="tldr" style="padding-top:15px;">
+                                <b class="tldr-bold" style="font-size: 35px;color:#c28c7e">ICLR 2025</b>
+                            </div>
+
                             <div class="publication-links">
-                                <a href="https://arxiv.org/abs/2410.18538" target="_blank" class="button is-rounded is-dark">
+                                <a href="https://arxiv.org/abs/2410.18538" target="_blank"
+                                    class="button is-rounded is-dark">
                                     <span class="icon"><i class="fas fa-file-pdf"></i></span>
                                     <span>Paper</span>
                                 </a>
-                                <a href="https://github.com/alimohammadiamirhossein/smite/" target="_blank" class="button is-rounded is-dark">
+                                <a href="https://github.com/alimohammadiamirhossein/smite/" target="_blank"
+                                    class="button is-rounded is-dark">
                                     <span class="icon"><i class="fab fa-github"></i></span>
                                     <span>Code</span>
                                 </a>
@@ -468,10 +502,9 @@
         </div>
         <div class="container is-max-desktop">
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/4ZnJlzyJnUk?si=apCuSlY73CZK8Hga" 
-                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
-                    clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    allowfullscreen>
+                <iframe src="https://www.youtube.com/embed/4ZnJlzyJnUk?si=apCuSlY73CZK8Hga" title="YouTube video player"
+                    frameborder="0" allow="accelerometer; autoplay; 
+                    clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
                 </iframe>
             </div>
             <br>
@@ -696,59 +729,67 @@
                     <button id="previous-button-3" onclick="changeImage(3, -1)">
                         <i class="fas fa-arrow-left"></i>
                     </button>
-    
+
                     <div class="image-pair">
                         <p style="font-size: 20px; text-align:center;" id="slider-description-3"></p>
                         <!-- Source Video -->
                         <div class="image-container">
                             <p class="image-caption"> <b> Source Video </b>
-                            <img id="source-video-3" class="cls" src="static/video/cars/car4/input.gif" alt="Source Video" autoplay loop controls muted />
+                                <img id="source-video-3" class="cls" src="static/video/cars/car4/input.gif"
+                                    alt="Source Video" autoplay loop controls muted />
                         </div>
                         <div class="image-container">
                             <p class="image-caption"> <b> Baseline-I </b>
-                            <img id="baseline-video-3" class="cls" src="static/video/cars/car4/slime.gif" alt="Source Video" autoplay loop controls muted />
+                                <img id="baseline-video-3" class="cls" src="static/video/cars/car4/slime.gif"
+                                    alt="Source Video" autoplay loop controls muted />
                         </div>
                         <div class="image-container">
                             <p class="image-caption"> <b> Grounded SAM 2 </b>
-                            <img id="grounded-sam-video-3" class="cls" src="static/video/cars/car4/gsam.gif" alt="Source Video" autoplay loop controls muted />
+                                <img id="grounded-sam-video-3" class="cls" src="static/video/cars/car4/gsam.gif"
+                                    alt="Source Video" autoplay loop controls muted />
                         </div>
                         <div class="image-container">
                             <p class="image-caption"> <b> SMITE (ours) </b>
-                            <img id="smite-video-3" class="cls" src="static/video/cars/car4/div.gif" alt="Source Video" autoplay loop controls muted />
+                                <img id="smite-video-3" class="cls" src="static/video/cars/car4/div.gif"
+                                    alt="Source Video" autoplay loop controls muted />
                         </div>
                     </div>
-    
+
                     <button id="next-button-3" onclick="changeImage(3, 1)">
                         <i class="fas fa-arrow-right"></i>
                     </button>
                 </div>
-                
+
                 <div id="image-slider-4" class="image-slider">
                     <button id="previous-button-4" onclick="changeImage(4, -1)">
                         <i class="fas fa-arrow-left"></i>
                     </button>
-    
+
                     <div class="image-pair">
                         <p style="font-size: 20px; text-align:center;" id="slider-description-4"></p>
                         <!-- Source Video -->
                         <div class="image-container">
                             <p class="image-caption"> <b> Source Video </b>
-                            <img id="source-video-4" class="cls" src="static/video/faces/face3/input.gif" alt="Source Video" autoplay loop controls muted />
+                                <img id="source-video-4" class="cls" src="static/video/faces/face3/input.gif"
+                                    alt="Source Video" autoplay loop controls muted />
                         </div>
                         <div class="image-container">
                             <p class="image-caption"> <b> Baseline-I </b>
-                            <img id="baseline-video-4" class="cls" src="static/video/faces/face3/slime.gif" alt="Baseline-I" autoplay loop controls muted />
+                                <img id="baseline-video-4" class="cls" src="static/video/faces/face3/slime.gif"
+                                    alt="Baseline-I" autoplay loop controls muted />
                         </div>
                         <div class="image-container">
                             <p class="image-caption"> <b> Grounded SAM 2 </b>
-                            <img id="grounded-sam-video-4" class="cls" src="static/video/faces/face3/gsam.gif" alt="Grounded SAM 2" autoplay loop controls muted />
+                                <img id="grounded-sam-video-4" class="cls" src="static/video/faces/face3/gsam.gif"
+                                    alt="Grounded SAM 2" autoplay loop controls muted />
                         </div>
                         <div class="image-container">
                             <p class="image-caption"> <b> SMITE (ours) </b>
-                            <img id="smite-video-4" class="cls" src="static/video/faces/face3/div.gif" alt="SMITE (ours)" autoplay loop controls muted />
+                                <img id="smite-video-4" class="cls" src="static/video/faces/face3/div.gif"
+                                    alt="SMITE (ours)" autoplay loop controls muted />
                         </div>
                     </div>
-    
+
                     <button id="next-button-4" onclick="changeImage(4, 1)">
                         <i class="fas fa-arrow-right"></i>
                     </button>
@@ -764,28 +805,32 @@
                         <!-- Source Video -->
                         <div class="image-container">
                             <p class="image-caption"> <b> Source Video </b>
-                            <img id="source-video-5" class="cls" src="static/video/horses/horse3/input.gif" alt="Source Video" autoplay loop controls muted />
+                                <img id="source-video-5" class="cls" src="static/video/horses/horse3/input.gif"
+                                    alt="Source Video" autoplay loop controls muted />
                         </div>
                         <div class="image-container">
                             <p class="image-caption"> <b> Baseline-I </b>
-                            <img id="baseline-video-5" class="cls" src="static/video/horses/horse3/slime.gif" alt="Baseline-I" autoplay loop controls muted />
+                                <img id="baseline-video-5" class="cls" src="static/video/horses/horse3/slime.gif"
+                                    alt="Baseline-I" autoplay loop controls muted />
                         </div>
                         <div class="image-container">
                             <p class="image-caption"> <b> Grounded SAM 2 </b>
-                            <img id="grounded-sam-video-5" class="cls" src="static/video/horses/horse3/gsam.gif" alt="Grounded SAM 2" autoplay loop controls muted />
+                                <img id="grounded-sam-video-5" class="cls" src="static/video/horses/horse3/gsam.gif"
+                                    alt="Grounded SAM 2" autoplay loop controls muted />
                         </div>
                         <div class="image-container">
                             <p class="image-caption"> <b> SMITE (ours) </b>
-                            <img id="smite-video-5" class="cls" src="static/video/horses/horse3/div.gif" alt="SMITE (ours)" autoplay loop controls muted />
+                                <img id="smite-video-5" class="cls" src="static/video/horses/horse3/div.gif"
+                                    alt="SMITE (ours)" autoplay loop controls muted />
                         </div>
                     </div>
-    
+
                     <button id="next-button-5" onclick="changeImage(5, 1)">
                         <i class="fas fa-arrow-right"></i>
                     </button>
                 </div>
 
-                    </tbody>
+                </tbody>
                 </table>
 
                 </tbody>
@@ -805,7 +850,7 @@
                 <!-- <br/> -->
                 <p style="font-size: 20px; text-align:center;" id="slider-description">Using a Single Reference Image on
                     a Long Video (Over 1,000 Frames, Video Speed Increased by 4x)</p>
-                    <br>
+                <br>
                 <table width="3000" align="center">
                     <tbody>
 
@@ -864,7 +909,8 @@
 
                 <p align="left">
                     <image style="float:right;padding:1%" width="400" src="static/images/SMITE_50_teaser.png" />
-                    <b>SMITE-50</b> is a video dataset designed for challenging segmentation tasks involving multiple object
+                    <b>SMITE-50</b> is a video dataset designed for challenging segmentation tasks involving multiple
+                    object
                     parts in difficult scenarios such as occlusion. It consists of 50 videos, each up to 20 seconds
                     long, with frame counts ranging from 24 to 400 and various aspect ratios (vertical and horizontal).
                     The dataset includes four main classes: “Horses,” “Faces,” “Cars,” and “Non-Text.” Videos in the
@@ -873,13 +919,15 @@
                     changes, and fine-grained parts that are difficult to track and segment over time. The “Non-Text”
                     category includes videos with parts that cannot be described using natural language, making them
                     challenging for zero-shot video segmentation models that rely on textual vocabularies. Primarily
-                    sourced from Pexels, <b>SMITE-50</b> features multi-granularity annotations, focusing on Horses, Human
+                    sourced from Pexels, <b>SMITE-50</b> features multi-granularity annotations, focusing on Horses,
+                    Human
                     Faces, and Cars, with a total of 41 videos. Each subset includes ten segmented reference images for
                     training and densely annotated videos for testing, with granularity varying from human eyes to
                     animal heads, relevant for applications like VFX. Additionally, nine videos feature segments that
                     cannot be described textually. The dataset includes dense annotations, with masks created for every
                     fifth frame and an average of six parts per frame across three granularity types. Compared to
-                    PumaVOS, which has 8% dense annotations, <b>SMITE-50</b> provides 20% dense annotations. Although still a
+                    PumaVOS, which has 8% dense annotations, <b>SMITE-50</b> provides 20% dense annotations. Although
+                    still a
                     work in progress, <b>SMITE-50</b> aims to be publicly available in the future.
                 </p>
             </div>
